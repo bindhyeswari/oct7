@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var worker = new Worker('twitter.js');
+
+        worker.onmessage = function (event) {
+            console.log(event.data);
+        };
+
+        worker.postMessage('angularjs');
+
+        makeAjax('angularjs');
+
+        function makeAjax(search){
+            var start = new Date();
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://api.github.com/search/repositories?q=' + search);
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+
+                    var end = new Date();
+                    console.log(end-start);
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
