@@ -1,0 +1,21 @@
+{
+  "name": "Oct7",
+  "version": "0.0.0",
+  "authors": [
+    "mishra <tech@peoplevendor.com>"
+  ],
+  "description": "generic folder",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "open-sans-fontface": "latest",
+      "reset-css": "latest",
+      "jquery": "latest"
+  }
+}

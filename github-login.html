@@ -9,20 +9,82 @@
         //          of particular interest is the background
         //          hint: background- image, position, repeat and color
 
+        // todo: use http://meyerweb.com/eric/tools/css/reset/
+
     </script>
+    <link rel="stylesheet" href="reset.css"/>
     <style>
-        li.github-logo {
-           background: black url('https://assets-cdn.github.com/assets/modules/home/octicons-bg-c8acbe8e472c31e7fa4af13c419146da21b5bb76.png');
+
+
+        header {
+            background-color: #f5f5f5;
+            overflow: auto;
         }
+
+        header > nav {
+            padding: 0.5em;
+            overflow: auto;
+        }
+
+        ul.nav {
+            /* cleanup code */
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        ul.nav > li {
+            float: left;
+        }
+
+        ul.nav > li.logo {
+            margin-left: 6em;
+        }
+
+        ul.nav > li.floatright {
+            float: right;
+        }
+
+        ul.nav > li > a {
+            display: inline-block;
+            padding: 4px 8px;
+            font-family: 'helvetica neue';
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 20px;
+            color: #333;
+
+        }
+
+
+
+        a.nav-button {
+            line-height: 5em;
+            padding: 0.75em 0.5em;
+            margin-right: 6em;
+
+            border: 1px solid #ccc;
+            border-radius: 0.25em;
+
+        }
+
+
+
+
     </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <ul>
-                <li class="github-logo"></li>
-                <li>As many li tags as you need</li>
+            <ul class="nav">
+                <li class="logo"><a href="http://www.google.com">Github</a></li>
+                <li><a href="http://www.google.com">Explore</a></li>
+                <li><a href="http://www.google.com">Features</a></li>
+                <li><a href="http://www.google.com">Enterprise</a></li>
+                <li><a href="http://www.google.com">Blog</a></li>
+                <li class="floatright"><a class="nav-button" href="http://www.google.com">Sign in</a></li>
             </ul>
         </nav>
     </header>
