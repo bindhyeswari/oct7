@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    <style>
+        span.myspan { /* 0 0 1 1 */
+            /* inline id class/attribute element */
+            background-color: red;
+
+            height: 100px;
+            display: block;
+        }
+
+        div.container {
+            background-color: green;
+            border: 10px solid darkred;
+
+        }
+        div.container > div {
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+    <span class="myspan">Inline Block</span>
+    <div class="container">
+        <div>asdf</div>
+        <div>asdf</div>
+        <div>asdf</div>
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>
